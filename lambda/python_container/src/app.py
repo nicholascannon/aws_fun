@@ -11,8 +11,7 @@ def handler(event, context):
     try:
         s3 = boto3.client('s3')
         print(s3.list_buckets())
-    except Exception:
-        # this won't work locally in docker because there are no creds
-        pass
-
-    return 'Hello from lambda!!'
+        return 'Hello from lambda!!'
+    except Exception as e:
+        print(e, file=sys.stderr)
+        return 'An error has occurred'
