@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e;
 
 echo "Building lambda function";
 
@@ -7,5 +8,7 @@ echo "Building lambda function";
 # run `npm i --only=production`
 npm i;
 
+npm run build;
+
 # zip deps together
-zip function.zip dist/index.js node_modules/;
+zip -r function.zip dist/index.js node_modules/;
