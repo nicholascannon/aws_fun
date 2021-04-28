@@ -2,9 +2,7 @@ import { Handler } from "aws-lambda";
 import axios from "axios";
 
 interface Event {
-  key1: string;
-  key2: string;
-  key3: string;
+  id: number;
 }
 
 interface Response {
@@ -13,10 +11,8 @@ interface Response {
 
 export const handler: Handler<Event, Response> = async (event, context) => {
   console.log(context);
-  console.log(event);
 
-  console.log("Results from API:");
-  const res = await axios.get("https://jsonplaceholder.typicode.com/posts/1")
+  const res = await axios.get(`https://jsonplaceholder.typicode.com/posts/${event.id}`);
   console.log(res.data);
 
   return {
