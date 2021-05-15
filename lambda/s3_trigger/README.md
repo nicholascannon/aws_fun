@@ -2,7 +2,7 @@
 
 Trigger a lambda function when an object is created in an s3 bucket. AWS tutorial reference can be found [here](https://docs.aws.amazon.com/lambda/latest/dg/with-s3-tutorial.html#with-s3-tutorial-create-policy).
 
-The lambda function recieves info on the object that has landed and the bucket it's in, the notification event does not contain the actual data, you must use boto3 to get the object data. In this lambda, it gets the bucket name and key from the object created and uses boto to fetch its contents.
+The lambda function recieves info on the object that has landed and the bucket it's in, the notification event does not contain the actual data, you must use boto3 to get the object data. In this lambda, it gets the bucket name and key for the object created and uses boto to fetch its contents.
 
 ## How to run
 
