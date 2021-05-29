@@ -1,7 +1,7 @@
 {
   "LambdaFunctionConfigurations": [
     {
-      "LambdaFunctionArn": "arn:aws:lambda:ap-southeast-2:696091413426:function:s3-py-example",
+      "LambdaFunctionArn": "arn:aws:lambda:ap-southeast-2:696091413426:function:s3-notif-func",
       "Events": ["s3:ObjectCreated:*"]
     }
   ]

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-aws lambda delete-function --function-name s3-py-example
+aws lambda delete-function --function-name s3-notif-func
 
 aws iam detach-role-policy \
     --role-name lambda-ex-tut \

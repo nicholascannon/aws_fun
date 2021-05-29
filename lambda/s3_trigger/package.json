@@ -1,0 +1,9 @@
+{
+  "name": "s3_trigger",
+  "version": "1.0.0",
+  "main": "function.js",
+  "author": "Nicholas Cannon",
+  "dependencies": {
+    "aws-sdk": "^2.912.0"
+  }
+}
