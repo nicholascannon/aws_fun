@@ -1,0 +1,4 @@
+name: awsFunLambda
+runtime: nodejs
+description: A fun AWS lambda pulumi example
+config: config
