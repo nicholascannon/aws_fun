@@ -7,8 +7,11 @@
     "remove": "sls remove"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.77",
     "serverless-offline": "^7.0.0",
     "serverless-webpack": "^5.5.0",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.2",
     "webpack": "^5.38.1"
   }
 }

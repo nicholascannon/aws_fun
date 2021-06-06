@@ -1,6 +1,6 @@
-'use strict';
+import { APIGatewayProxyHandlerV2 } from "aws-lambda";
 
-module.exports.handler = async (event) => {
+export const handler: APIGatewayProxyHandlerV2 = async (event) => {
   console.log(`Recieved event: ${JSON.stringify(event, null, 2)}`);
   console.log(`Is running locally: ${process.env.IS_OFFLINE}`);
 
