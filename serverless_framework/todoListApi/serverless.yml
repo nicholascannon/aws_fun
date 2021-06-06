@@ -1,7 +1,5 @@
 service: todolist
-
 configValidationMode: error
-
 frameworkVersion: '2'
 
 provider:
