@@ -10,5 +10,5 @@
     "moduleResolution": "Node",
     "allowJs": true
   },
-  "include": ["./src"] // avoid including webpack.config.js
+  "include": ["./src/**/*.ts"]
 }

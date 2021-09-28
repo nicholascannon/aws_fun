@@ -1,13 +1,14 @@
 import { APIGatewayProxyHandlerV2 } from "aws-lambda";
+import { env } from "./env";
 
 export const handler: APIGatewayProxyHandlerV2 = async (event) => {
-  console.log(`Recieved event: ${JSON.stringify(event, null, 2)}`);
-  console.log(`Is running locally: ${process.env.IS_OFFLINE}`);
+  console.log(`event: ${JSON.stringify(event, null, 2)}`);
+  console.log(`environment: ${JSON.stringify(env)}`);
 
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: "Serverless Todo list API",
+      message: "Serverless TypeScript Starter",
     }),
   };
 };

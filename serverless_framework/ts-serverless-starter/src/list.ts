@@ -1,9 +1,10 @@
 import { APIGatewayProxyHandlerV2 } from "aws-lambda";
 import axios from "axios";
+import { env } from "./env";
 
 export const handler: APIGatewayProxyHandlerV2 = async (event) => {
-  console.log(`Recieved event: ${JSON.stringify(event, null, 2)}`);
-  console.log(`Is running locally: ${process.env.IS_OFFLINE}`);
+  console.log(`event: ${JSON.stringify(event, null, 2)}`);
+  console.log(`environment: ${JSON.stringify(env)}`);
 
   const res = await axios.get("https://jsonplaceholder.typicode.com/todos");
 
