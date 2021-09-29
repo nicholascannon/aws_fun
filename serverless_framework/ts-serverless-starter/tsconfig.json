@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "es2020",
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "Node",
-    "allowJs": true
+    "allowJs": true,
+    /* use esnext to allow webpack to tree shake */
+    "module": "esnext",
+    "moduleResolution": "node"
   },
   "include": ["./src/**/*.ts"]
 }
