@@ -16,6 +16,7 @@
     "webpack": "^5.38.1"
   },
   "dependencies": {
+    "aws-sdk": "^2.997.0",
     "axios": "^0.21.1"
   }
 }
