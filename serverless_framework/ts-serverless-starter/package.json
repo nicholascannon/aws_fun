@@ -2,13 +2,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "local": "sls offline start",
-    "deploy": "sls deploy",
-    "remove": "sls remove"
+    "start": "sls offline start --custom-var local-var"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.77",
-    "@types/axios": "^0.14.0",
     "serverless-offline": "^7.0.0",
     "serverless-webpack": "^5.5.0",
     "ts-loader": "^9.2.3",
@@ -16,7 +13,6 @@
     "webpack": "^5.38.1"
   },
   "dependencies": {
-    "aws-sdk": "^2.997.0",
-    "axios": "^0.21.1"
+    "aws-sdk": "^2.997.0"
   }
 }

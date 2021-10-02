@@ -23,6 +23,8 @@ functions:
       - httpApi:
           path: /
           method: get
+    environment:
+      CUSTOM_VAR: ${opt:custom-var}
   
   list-buckets:
     handler: src/list-buckets.handler
