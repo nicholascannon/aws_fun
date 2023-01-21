@@ -1,0 +1,27 @@
+service: ts-esbuild-serverless
+
+frameworkVersion: '3'
+
+provider:
+    name: aws
+    runtime: nodejs18.x
+    region: 'ap-southeast-2'
+
+package:
+    individually: true
+
+plugins:
+    - serverless-esbuild
+
+custom:
+    esbuild:
+        format: 'esm'
+        outputFileExtension: '.mjs'
+
+functions:
+    hello:
+        handler: ./src/hello.handler
+        events:
+            - httpApi:
+                  method: GET
+                  path: /hello
